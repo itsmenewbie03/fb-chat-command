@@ -25,7 +25,7 @@ const eventMiddlewares = [];
 const addMiddleware = (...middleware) => middlewares.push(...middleware);
 
 const on = (event, listener, ...args) => events.push({ event, listener, args });
-const addEventMiddelware = (...middleware) =>
+const addEventMiddleware = (...middleware) =>
   eventMiddlewares.push(...middleware);
 
 const add = (callback, option) => commands.push({ callback, option });
@@ -150,6 +150,6 @@ module.exports = {
   init,
   list,
   addMiddleware,
-  addEventMiddelware,
+  addEventMiddleware,
   on,
 };
