@@ -1,6 +1,6 @@
 {
   "name": "fb-chat-command-mod",
-  "version": "1.3.24",
+  "version": "1.3.25",
   "description": "Unofficial Facebook Chat API for user-account (not page).",
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/itsmenewbie03/fb-chat-command/issues"
   },
-  "author": "Avery, David, Maude, Benjamin, UIRI, Jerson Carin, N3wb!3",
+  "author": "Avery, David, Maude, Benjamin, UIRI, Jerson Carin, Salvador Ligayao",
   "license": "MIT",
   "dependencies": {
     "bluebird": "^2.11.0",

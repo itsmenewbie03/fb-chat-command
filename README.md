@@ -21,9 +21,9 @@ FB_PASS=markzuckerbot
 LISTEN_EVENT=true
 SELF_LISTEN=true
 ```
-Now you can run npm command to authenticate it.
+Now you can run npx command to authenticate it.
 ```bash
-npm authenticate
+npx authenticate
 ```
 
 ## Example Usage
@@ -101,7 +101,7 @@ See [this](https://github.com/Schmavery/facebook-chat-api/blob/master/DOCS.md) f
 The MIT License (MIT)
 
 Copyright (c) 2015 Avery, Benjamin, David, Maude
-Copyright (c) 2022 Jerson Carin
+Copyright (c) 2022 Jerson Carin, Salvador Ligayao
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

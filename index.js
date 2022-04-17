@@ -8,9 +8,20 @@ if (!fs.existsSync(`${process.cwd()}/state.session`)) {
   console.log(
     `${chalk.red(
       "Error: "
-    )}Session has not found, please run authenticate command (yarn authenticate|npm authenticate)`
+    )}Session has not found!. Running npx authenticate command!.`
   );
-  return;
+  exec("npx authenticate", (error, stdout, stderr) => {
+    if (error) {
+      console.log(`error: ${error.message}`);
+      return;
+    }
+    if (stderr) {
+      console.log(`stderr: ${stderr}`);
+      return;
+    }
+    console.log(`${chalk.green(stdout)}`);
+    process.exit(0);
+  });
 }
 
 const listenEvents = process.env.LISTEN_EVENT ? process.env.LISTEN_EVENT : true;
