@@ -152,7 +152,7 @@ const init = (option = {}) => {
   }
 };
 
-process.on("uncaughtException", (err) => {
+process.on("uncaughtException", (error) => {
   return console.log(`${chalk.red("Error: ")}${error.message} in file: ${error.fileName} on line ${error.lineNumber}`);
 });
 
