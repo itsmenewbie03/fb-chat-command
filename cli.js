@@ -18,7 +18,10 @@ const password = process.env.FB_PASS;
 
 (async () => {
     const browser = await puppeteer.launch({
-        headless: false, args: ['--no-sandbox', '--disable-setuid-sandbox', '--incognito', '--no-zygote']
+        headless: true, args: ['--no-sandbox', '--disable-setuid-sandbox', '--incognito', '--no-zygote'],
+        env: {
+            DISPLAY: ":10.0"
+        }
     });
 
     try {
@@ -52,7 +55,7 @@ const password = process.env.FB_PASS;
             await page.click('input[name="submit[Continue]"');
             await page.waitForSelector('#checkpointSubmitButton-actual-button', { timeout: 8000 });
             console.log(`${chalk.green("Info:")} Waiting for approval...`);
-            await sleep(8000);
+            await sleep(20000);
             await page.click('input[name="submit[Continue]"');
 
         }
